@@ -1,0 +1,596 @@
+/*
+Theme Name: Nordisk Institutt for forskning og utvikling
+Theme URI: http://eyego.no
+Author: Katja Völker, eyego
+Author URI: http://eyego.no/
+Version: 2.0
+Tags: custom-menu, featured-images, microformats, sticky-post, threaded-comments
+*/
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+  color: #222;
+  background: url(images/design/menutop.jpg) repeat-x 0 -2px
+}
+
+h1, h2, h4, h5, h6 {
+  color: #CB4A57
+}
+
+h1 {
+  font-size: 20px
+}
+
+h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 15px;
+  color: #404040
+}
+
+h3 span {
+  color: #878D91;
+  float: right
+}
+
+p {
+  font-size: 13px;
+  line-height: 22px;
+  margin-bottom: 13px
+}
+
+.section h1 a {
+  color: #404040
+}
+
+a {
+  color: #444;
+  /* text-decoration: none */
+}
+
+a:hover, a.active, .section h1 a, #topmenu a, #usercontrol a {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+  outline: none
+}
+
+.img_holder {
+  height: 280px;
+  overflow: hidden;
+  margin-bottom: 10px
+}
+
+.section li a {
+  color: #404040;
+  font-weight: normal;
+}
+
+.section h1 a:hover {
+  text-decoration: underline
+}
+
+ul {
+  list-style: none
+}
+
+.entry-content ul {
+  list-style: disc;
+  padding: inherit
+}
+
+.entry-content ul,
+.entry-content ol {
+  margin-left: 20px
+}
+
+ul.bullet li, ul.children li, ul.sub-menu .sub-menu .sub-menu .sub-menu li {
+  background: url(images/design/bullet.png) no-repeat 0 10px;
+  padding-left: 10px;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(255,255,255,0.85);
+  padding: 5px 13px;
+  bottom: 0;
+  left: 0;
+}
+
+.hideme {
+  display: none
+}
+
+.user_def {
+  border-top: solid 1px gray;
+  margin-top: 10px
+}
+
+#latest_wrapper {
+  font-size: 12px;
+  float: right;
+}
+
+#latest_wrapper a {
+  color: #000;
+  margin-left: 10px
+}
+
+input[type="submit"] {
+  background: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #2E8E9E;
+  padding: 3px 5px;
+  display: inline-block;
+  vertical-align: top
+}
+
+input[type="text"] {
+  width: 160px;
+  height: 19px;
+  display: inline-block;
+  vertical-align: top
+}
+
+.hide {
+  display: none
+}
+
+#page {
+  width: 1053px;
+  margin: 0 auto
+}
+
+#topmenu {
+  position: relative
+}
+
+#topmenu ul {
+  font-weight: bold
+}
+
+#topmenu ul li {
+  height: 25px;
+  display: inline-block;
+  border-left: solid 1px #fff;
+  border-right: solid 1px #fff;
+  font-size: 16px;
+  margin-right: -5px;
+  padding: 13px 10px 7px;
+  text-align: center;
+  width: 129px;
+}
+
+#topmenu ul a, 
+#header a {
+  color: #fff
+}
+
+#topmenu .sub-menu {
+  font-weight: normal;
+  position: absolute;
+  left: 0;
+  z-index: 200;
+  width: 1031px;
+  background: #E4E8EB;
+  background: -moz-linear-gradient(center top , #E4E8EB, #FEFEFE);
+  background: -o-linear-gradient(center top , #E4E8EB, #FEFEFE);
+  background: -webkit-linear-gradient(top , #E4E8EB, #FEFEFE);
+  background: linear-gradient(center top , #E4E8EB, #FEFEFE);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4E8EB', EndColorStr='#FEFEFE');
+  margin-top: 12px;
+  padding: 10px 0px 5px 20px;
+  text-align: left;
+  border: solid 1px #2E8E9E;
+  border-top: none;
+  display: none;
+}
+
+#topmenu .sub-menu li {
+  margin-right: 0;
+  font-size: 13px;
+  height: auto;
+  text-align: left;
+  line-height: 22px;
+  font-weight: bold;
+  border-left: none;
+  margin-bottom: 10px;
+}
+
+/*
+#topmenu .sub-menu li a {
+  padding
+}
+*/
+
+#topmenu .sub-menu li li {
+  padding: 3px 10px 0 !important;
+  margin-left: -10px;
+  font-weight: normal;
+  border: none;
+  margin-bottom: 0
+}
+
+#topmenu .sub-menu li li:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+#topmenu li .sub-menu li {
+  display: inline-block;
+  vertical-align: top;
+  width: 148px;
+  float: left;
+  overflow: hidden
+}
+
+#topmenu li:hover {
+  background: #E4E8EB
+}
+
+#topmenu li:hover > ul {
+  display: block
+}
+
+#topmenu li:hover > a,
+#topmenu li:hover > ul a {
+  color: #444
+}
+
+
+#topmenu li .sub-menu .sub-menu {
+  display: block;
+  position: inherit;
+  width: auto;
+  background: none;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border: none;
+  border-top: 1px solid #222
+}
+
+#topmenu .sub-menu a, #menuhide a {
+  color: #fff;
+}
+
+#header {
+  background: #2E8E9E;
+  padding: 15px;
+  color: #fff;
+  position: relative
+}
+
+#header > * {
+  display: inline-block;
+  vertical-align: middle
+}
+
+#header p {
+  width: 605px
+}
+
+#logo {
+  margin-right: 20px
+}
+
+#menuhide {
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  padding-right: 10px
+}
+
+#menuhide.show {
+  background: url(images/design/hide.png) no-repeat right 1px;
+}
+
+#menuhide.hide {
+  background: url(images/design/show.png) no-repeat right 2px;
+}
+
+#searchbox {
+  width: 215px;
+  float: right
+}
+
+#searchbox a {
+  font-size: 10px;
+  width: 70px;
+  display: inline-block;
+  text-align: center
+}
+
+#searchbox a.selected {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #fff
+}
+
+#columns {
+  padding: 15px 0
+}
+
+#usercontrol li {
+  text-align: center;
+  background: #E4E8EB;
+  font-size: 14px;
+  padding: 5px 0;
+  width: 180px;
+  margin-bottom: 5px;
+  font-weight: bold
+}
+
+.page-numbers {
+  font-size: 12px;
+  padding: 1px 2px
+}
+
+.page-numbers.current {
+  color: #fff;
+  background: #878D91
+}
+
+.left-column, .right-column, .center-column {
+  display: inline-block;
+  vertical-align: top
+}
+
+.left-column .outer-head,
+.right-column .outer-head,
+.left-column .inner-head, 
+.right-column .inner-head,
+#usercontrol {
+  margin-bottom: 15px
+}
+
+.left-column {
+  width: 210px;
+}
+
+.right-column {
+  width: 180px;
+  padding: 0 15px
+}
+
+.left-column .box, .right-column .box {
+  border-color: #E8E8E6;
+  border-style: solid;
+} 
+
+.left-column .all, .right-column .all,
+.left-column .important, .right-column .important {
+  margin-top: 10px;
+  display: inline-block
+}
+
+.left-column .ads, .right-column .ads {
+  font-size: 10px !important;
+  display: inline-block;
+  width: 100%
+}
+
+.left-column .ads:last-child, .right-column .ads:last-child {
+  margin-top: 10px
+}
+
+.left-column .outer-head .box, .right-column .outer-head .box {
+  border-width: 1px;
+  padding: 13px
+}
+
+.left-column .outer-head h2, .right-column .outer-head h2 {
+  margin-left: 15px;
+  margin-bottom: 5px
+}
+
+.left-column .inner-head .box, .right-column .inner-head .box {
+  border-width: 3px;
+  padding: 11px;
+}
+
+.left-column .outer-head a,
+.right-column .outer-head a,
+.left-column .inner-head a, 
+.right-column .inner-head a,
+.left-column .outer-head ul,
+.right-column .outer-head ul,
+.left-column .inner-head ul, 
+.right-column .inner-head ul {
+  font-size: 13px
+}
+
+.left-column .linkages {
+  margin: 0 15px 15px
+}
+
+.left-column .linkages a {
+  color: #000;
+  font-weight: normal;
+  display: none
+}
+
+.left-column .linkages a:hover {
+  font-weight: bold;
+}
+
+.left-column .linkages .sub-menu .sub-menu .current-menu-item .sub-menu a,
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-item-sister a,
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-ancestor a,
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-ancestor-sister a,
+.left-column .linkages a.visible {
+  display: block
+}
+
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-item a {
+  font-weight: bold !important;
+  text-decoration: underline
+}
+
+.left-column .linkages .current-menu-item .sub-menu a {
+  font-weight: normal !important;
+  text-decoration: none
+}
+
+.left-column .linkages .current-menu-item li a {
+  font-weight: normal
+}
+
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-parent a {
+  font-weight: bold
+}
+
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-parent .sub-menu a,
+.left-column .linkages .sub-menu .sub-menu .sub-menu .current-menu-item .sub-menu a {
+  font-weight: inherit
+}
+
+.center-column {
+  width: 593px;
+  padding: 0 15px;
+}
+
+.center-column .article-first {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px
+}
+
+.frontpage .center-column {
+  float: left;
+  width: 597px
+}
+
+.frontpage .center-column .article-first {
+  margin-bottom: 0
+}
+
+.center-column #comments,
+.center-column #comments-list,
+#respond {
+  margin-top: 10px
+}
+
+.center-column #comments-list ul {
+  background: #F5F5F5;
+  padding: 4px
+}
+
+.center-column #comments h3 {
+  margin-bottom: 10px
+}
+
+.center-column #comments .input_holder,
+.center-column #comments #form-section-comment {
+  display: inline-block;
+  vertical-align: top
+}
+
+.center-column #comments label,
+.center-column #comments .comment-author,
+.center-column #comments .comment-reply-link {
+  font-size: 13px
+}
+
+.center-column #comments input[type="text"] {
+  border: solid 1px #E8E8E6
+}
+
+.center-column .section .more {
+  font-size: 14px;
+  text-decoration: underline;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  margin: 5px 0 10px
+}
+
+.center-column .section .more:hover {
+  text-decoration: none
+}
+
+.center-column .section ul,
+.center-column .section ol {
+  font-size: 13px;
+  clear: both;
+}
+
+.center-column .section li,
+.left-column .outer-head li,
+.right-column .outer-head li,
+.left-column .inner-head li, 
+.right-column .inner-head li {
+  line-height: 22px
+}
+
+.center-column .section table {
+  font-size: 13px
+}
+
+.center-column .section table thead {
+  font-weight: bold
+}
+
+.center-column .section table thead td {
+  background: #E4E8EB
+}
+
+.center-column .section table td {
+  padding: 0 4px;
+}
+
+.center-column .section table tbody td {
+  border: solid 1px #E4E8EB
+}
+
+.center-column .section p.date {
+  font-weight: bold;
+  margin-right: 5px;
+  margin-bottom: 0
+}
+
+.center-column .section h1:first-child {
+  margin-bottom: 10px
+}
+
+.center-column .section p,
+.center-column .section img,
+.center-column .section h1 {
+  display: inline-block;
+}
+
+.center-column .entry-content p {
+  display: inherit
+}
+
+.center-column .section .article-first h1 {
+  margin-bottom: 5px;
+  display: inline
+}
+
+.center-column .section .article-first p.imgBefore {
+  width: 437px
+}
+
+.center-column .section img {
+  float: left;
+  margin: 0 10px 10px 0
+}
+
+#footer {
+  background: #2E8E9E;
+  padding: 15px
+}

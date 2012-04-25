@@ -1,0 +1,22 @@
+.left-column,
+.right-column,
+#topmenu,
+#comments,
+#searchbox,
+#footer {
+  display: none
+}
+
+.center-column .entry-content p.user_def {
+  visibility: hidden
+}
+
+#main .center-column {
+  width: 100%;
+  font-size: 140% !important
+}
+
+#main .center-column .entry-title,
+#main .center-column .entry-content {
+  display: block !important
+}
