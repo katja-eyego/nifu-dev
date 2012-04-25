@@ -4,10 +4,10 @@
     <h1 class="entry-title"><?php the_title(); ?></h1>
     <div class="entry-content">
     <?php if ( has_post_thumbnail() ) { echo '<div class="img_holder">'; the_post_thumbnail('article'); echo '</div>'; } the_content(); 
-        if(in_category(array('internal', 'extarenal'))) {
-          echo '<p class="user_def">Brukerdefinert <input type="checkbox" name="userdef_news" /></p>';
+        if(in_category(array('internal', 'external'))) {
+          echo '<p class="user_def">Brukerdefinert <input type="checkbox" name="news" class="user_def_news" /></p>';
         } else if(in_category(array('latest_calls'))) {
-          echo '<p class="user_def">Brukerdefinert <input type="checkbox" name="userdef_calls" /></p>';
+          echo '<p class="user_def">Brukerdefinert <input type="checkbox" name="calls" class="user_def_calls" /></p>';
         } 
       ?>
     <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'nifu' ) . '&after=</div>') ?>
